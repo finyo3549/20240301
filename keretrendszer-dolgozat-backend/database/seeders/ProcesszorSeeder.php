@@ -12,6 +12,6 @@ class ProcesszorSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        \App\Models\Processzor::factory(10)->create();
     }
 }

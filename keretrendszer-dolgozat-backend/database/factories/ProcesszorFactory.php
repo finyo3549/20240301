@@ -17,7 +17,11 @@ class ProcesszorFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'gyarto' => $this->faker->randomElement(['Intel', 'AMD']),
+            'tipus' => $this->faker->word,
+            'orajel' => $this->faker->randomFloat(2, 1, 5),
+            'architektura' => $this->faker->randomElement(['x86', 'x64', 'IA-64', 'ARM']),
+            'megjelenes_datuma' => $this->faker->date(),
         ];
     }
 }
