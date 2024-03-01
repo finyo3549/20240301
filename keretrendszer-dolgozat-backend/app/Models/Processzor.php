@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Processzor extends Model
 {
     use HasFactory;
+    protected $fillable = ['gyarto', 'tipus', 'orajel', 'architektura', 'megjelenes_datuma'];
 }
