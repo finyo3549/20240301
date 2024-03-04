@@ -4,6 +4,7 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreProcesszorRequest;
+use App\Http\Requests\UpdateProcesszorRequest;
 use Illuminate\Http\Request;
 use App\Models\Processzor;
 
@@ -49,7 +50,7 @@ class ProcesszorController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(UpdateProcesszorRequest $request, string $id)
     {
         $processzor = Processzor::find($id);
         if(is_null($processzor)) {
