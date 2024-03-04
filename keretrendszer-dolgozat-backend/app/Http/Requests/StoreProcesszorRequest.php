@@ -11,7 +11,7 @@ class StoreProcesszorRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,11 @@ class StoreProcesszorRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'gyarto' => 'required|string',
+            'tipus' => 'required|string',
+            'orajel' => 'required|numeric|between:1,5',
+            'architektura' => 'required|string',
+            'megjelenes_datuma' => 'required|date'
         ];
     }
 }

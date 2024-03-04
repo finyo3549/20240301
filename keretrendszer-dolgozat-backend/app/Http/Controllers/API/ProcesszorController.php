@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreProcesszorRequest;
 use Illuminate\Http\Request;
 use App\Models\Processzor;
 
@@ -19,7 +20,7 @@ class ProcesszorController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StoreProcesszorRequest $request)
     {
         $processzor = Processzor::create([
             'gyarto' => $request->gyarto,
